@@ -49,7 +49,13 @@ form .btn-enviar input:hover {
 
 /* ESTILO DO CABEÇALHO */
 header {
-    padding: 40px 4%;
+    padding: 20px 4%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    background-color: #d6c3d4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header>.interface {
@@ -59,14 +65,14 @@ header>.interface {
 }
 
 header a {
-    color: #5c5c5c;
+    color: #fff;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
 }
 
 header nav.menu-desktop a:hover {
-    color: #fff;
+    color: #5c5c5c;
     transform: scale(1.05);
 }
 
@@ -150,13 +156,23 @@ header nav.menu-desktop ul li {
 
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site {
-    padding: 40px 4%;
+    padding: 160px 4%;
 }
 
 section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
+}
+
+.topo-do-site .flex .foto {
+    flex-shrink: 0; /* Impede que a imagem diminua */
+    margin-right: 30px; /* Adapte conforme necessário */
+}
+
+.topo-do-site .flex .foto img {
+    width: 260px; /* Adapte o tamanho da imagem conforme necessário */
+    border-radius: 20%; /* Adiciona borda circular na imagem */
 }
 
 .topo-do-site h1 {
@@ -186,15 +202,6 @@ section.topo-do-site .flex {
 
 }
 
-@keyframes flutuar {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        top: 30px;
-    }
-}
 
 /* ESTILO DO SOBRE */
 section.sobre {
